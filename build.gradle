@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
+    id 'net.robyf.jarinjar' version '1.0.9'
+}
+
+javafx {
+    modules = ["javafx.controls","javafx.fxml"]
+}
+group 'subjectCalc'
+version '1.0'
+
+sourceCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+}
+configurations {
+    extraLibs
+}
+String javafxLibsPath = System.getenv('JAVAFX_LIB_PATH')
+if(javafxLibsPath==null){
+    javafxLibsPath = "C:\\Users\\bobo9\\javafx\\javafx-sdk-11.0.2\\lib"
+}
+
+println "Javafx Path:"+javafxLibsPath
+println compileJava.classpath.asPath
+
+ConfigurableFileTree javafxLibs = fileTree(dir: javafxLibsPath)
+javafxLibs.exclude '*.zip'
+
+jar {
+    duplicatesStrategy 'exclude'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    extraLibs javafxLibs
+}
+executableJar {
+    mainClass 'application.Main'
+    configuration = configurations.extraLibs
+}
+
+mainClassName = "$moduleName/application.Main"
