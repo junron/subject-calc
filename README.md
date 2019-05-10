@@ -1,2 +1,2 @@
 # subject-calc
-A javaFX app to calculate your CS module grade
+A javaFX app to calculate your subject module grade
