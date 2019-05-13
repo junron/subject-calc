@@ -1,0 +1,35 @@
+{
+  "name": "CS",
+  "assessments": [
+    {
+      "name": "PA1",
+      "weightage": 17.5,
+      "maxScore": 50
+    },
+    {
+      "name": "PA2",
+      "weightage": 17.5,
+      "maxScore": 52
+    },
+    {
+      "name": "GE1",
+      "weightage": 10,
+      "maxScore": 45
+    },
+    {
+      "name": "GE2",
+      "weightage": 10,
+      "maxScore": 55
+    },
+    {
+      "name": "Test 1",
+      "weightage": 22.5,
+      "maxScore": 40
+    },
+    {
+      "name": "Test 2",
+      "weightage": 22.5,
+      "maxScore": 35
+    }
+  ]
+}

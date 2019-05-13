@@ -25,7 +25,6 @@ if(javafxLibsPath==null){
 }
 
 println "Javafx Path:"+javafxLibsPath
-println compileJava.classpath.asPath
 
 ConfigurableFileTree javafxLibs = fileTree(dir: javafxLibsPath)
 javafxLibs.exclude '*.zip'
@@ -37,10 +36,13 @@ jar {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     extraLibs javafxLibs
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.8'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.8'
 }
 executableJar {
     mainClass 'application.Main'
     configuration = configurations.extraLibs
 }
+println compileJava.classpath.asPath
 
 mainClassName = "$moduleName/application.Main"
