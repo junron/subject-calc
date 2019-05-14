@@ -1,7 +1,6 @@
 package application;
 
 import dataloader.Assessment;
-import dataloader.Loader;
 import dataloader.Subject;
 import javafx.fxml.FXML;
 import javafx.geometry.HPos;
@@ -14,7 +13,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class SubjectCalcController {
@@ -40,15 +38,10 @@ public class SubjectCalcController {
     gradeOut.setTextFill(Color.web(getGradeColor(total / 100)));
   }
 
-  @FXML
-  public void initialize() {
+
+  public void initialize(Subject subject) {
+    this.subject = subject;
 //    gridPane.setGridLinesVisible(true);
-    try {
-      subject = Loader.load("cs.json");
-    } catch (IOException e) {
-      e.printStackTrace();
-      return;
-    }
     ArrayList<Assessment> assessments = subject.getAssessments();
     ColumnConstraints c = new ColumnConstraints();
     c.setPercentWidth(100.0 / (assessments.size() + 1));

@@ -1,0 +1,30 @@
+{
+  "name": "Geography",
+  "assessments": [
+    {
+      "name": "GA1",
+      "weightage": 12.5,
+      "maxScore": 20
+    },
+    {
+      "name": "GA2",
+      "weightage": 12.5,
+      "maxScore": 20
+    },
+    {
+      "name": "Test",
+      "weightage": 25,
+      "maxScore": 25
+    },
+    {
+      "name": "GI",
+      "weightage": 20,
+      "maxScore": 100
+    },
+    {
+      "name": "Exam",
+      "weightage": 30,
+      "maxScore": 50
+    }
+  ]
+}

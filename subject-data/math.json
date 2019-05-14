@@ -1,0 +1,45 @@
+{
+  "name": "Math",
+  "assessments": [
+    {
+      "name": "GT1",
+      "weightage": 4,
+      "maxScore": 10
+    },
+    {
+      "name": "GT2",
+      "weightage": 4,
+      "maxScore": 10
+    },
+    {
+      "name": "GT3",
+      "weightage": 4,
+      "maxScore": 15
+    },
+    {
+      "name": "GT4",
+      "weightage": 4,
+      "maxScore": 10
+    },
+    {
+      "name": "GT5",
+      "weightage": 4,
+      "maxScore": 12
+    },
+    {
+      "name": "Test",
+      "weightage": 20,
+      "maxScore": 30
+    },
+    {
+      "name": "Journal",
+      "weightage": 10,
+      "maxScore": 25
+    },
+    {
+      "name": "Exam",
+      "weightage": 50,
+      "maxScore": 60
+    }
+  ]
+}

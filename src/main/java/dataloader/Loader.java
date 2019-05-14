@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class Loader {
 
@@ -16,5 +18,15 @@ public class Loader {
     return load(new File("subject-data/"+filename));
   }
 
+  public static ArrayList<Subject> loadAll() throws IOException {
+    File dataDir = new File("subject-data");
+    ArrayList<Subject> subjects = new ArrayList<>();
+    for(File f : Objects.requireNonNull(dataDir.listFiles())){
+      if(f.isFile()){
+        subjects.add(load(f.getName()));
+      }
+    }
+    return subjects;
+  }
 
 }

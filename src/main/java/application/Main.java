@@ -11,7 +11,7 @@ public class Main extends Application {
   @Override
   public void start(Stage primaryStage) {
     try {
-      AnchorPane root = FXMLLoader.load(getClass().getResource("/cs.fxml"));
+      AnchorPane root = FXMLLoader.load(getClass().getResource("/main.fxml"));
       Scene scene = new Scene(root, 640, 480);
       primaryStage.setResizable(false);
       scene.getStylesheets().add(getClass().getResource("/application.css").toExternalForm());
